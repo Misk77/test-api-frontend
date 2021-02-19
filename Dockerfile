@@ -1,6 +1,8 @@
-FROM node:12
-WORKDIR /frontend
-COPY . .
-RUN npm install && npm install nodemon && npm install express-http-proxy --save
+FROM node:12-alpine
 EXPOSE 5000
-CMD npm run start
+ENV APP_HOME=/usr/src/trainee-frontend
+WORKDIR ${APP_HOME}
+COPY ./frontend ${APP_HOME}/frontend
+COPY package*.json ${APP_HOME}/
+RUN npm install express --save && npm install -g nodemon && npm install pug
+CMD ["npm", "run", "start"]
