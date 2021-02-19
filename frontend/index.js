@@ -28,14 +28,14 @@ app.use(express.static(path.join(__dirname, "public" )));
 app.get("/", (req, res ) => {
   res.render("index",{ title: "indexROOT-Home" });
 });
-app.get("/Harry_Bot", (req, res) => {
-  res.render("Harry_Bot", { title: "indexROOT-Harry-Bot", userProfile: { nickname: "indexROOT-Harry-Bot" } });
+app.get("/page1", (req, res) => {
+  res.render("page1", { title: "indexROOT-page1", userProfile: { nickname: "indexROOT-page1" } });
 });
 app.get("/create_profile", (req, res) => {
   res.render("create_profile", { title: "indexROOT-create_profile", userProfile: { nickname: "indexROOT-create_profile" } });
 });
-app.get("/Harry_personlized", (req, res) => {
-  res.render("Harry_personlized", { title: "indexROOT-Harry_personlized", userProfile: { nickname: "indexROOT-Harry_personlized" } });
+app.get("/page2", (req, res) => {
+  res.render("/page2", { title: "indexROOT-/page2", userProfile: { nickname: "indexROOT-/page2" } });
 });
 app.get("/Social_platform", (req, res) => {
   res.render("Social_platform", { title: "indexROOT-Social_platform", userProfile: { nickname: "indexROOT-Social_platform" } });

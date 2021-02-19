@@ -33,7 +33,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "ATG-RUBRIK", "ATG-RUBRIK";
+  font-family: "kalle-RUBR", "kalle-RUBRIK";
   text-transform: uppercase;
 
   padding: 0;
@@ -143,6 +143,6 @@ a {
 }
 
 .WelcomeView {
-  background: url("member-registration-background.jpg") left bottom;
+  background: url("background.jpg") left bottom;
   background-size: cover;
 }
