@@ -1,14 +1,14 @@
 {
-  "name": "ATG-TNG",
+  "name": "kalle-TNG",
   "version": "1.0.0",
-  "description": "test atg-next-Gen app",
+  "description": "test kalle-next-Gen app",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./frontend/index.js",
     "ui": "browser-sync start --config bs-config.js"
   },
   "keywords": [],
-  "author": "Team21",
+  "author": "kalle21",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13",
