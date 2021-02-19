@@ -1,10 +1,10 @@
 {
   "name": "ATG-TNG",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "test atg-next-Gen app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./frontend/index.js",
+    "start": "nodemon ./index.js",
     "ui": "browser-sync start --config bs-config.js"
   },
   "keywords": [],
