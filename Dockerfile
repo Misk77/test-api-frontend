@@ -2,7 +2,7 @@ FROM node:12-alpine
 EXPOSE 5000
 ENV APP_HOME=/usr/src/trainee-frontend
 WORKDIR ${APP_HOME}
-RUN npm install && npm install express --save && npm install -g nodemon && npm install pug
+COPY package*.json ${APP_HOME}/
+RUN npm install
 COPY frontend/ .
-COPY package*.json ${APP_HOME}/ 
 CMD ["npm", "run", "start"]
