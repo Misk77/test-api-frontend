@@ -4,7 +4,7 @@
   "description": "test atg-next-Gen app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js",
+    "start": "nodemon ./frontend/index.js",
     "ui": "browser-sync start --config bs-config.js"
   },
   "keywords": [],
