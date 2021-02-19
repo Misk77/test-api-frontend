@@ -1,0 +1,22 @@
+extends layout
+
+block layout-content
+  div.VView.WelcomeView
+    h1.Banner WELCOME, #{userProfile.nickname}!
+    div.Message
+      div.Title
+        h3 This is your profile page (h3)
+        h2 Team21 - ATG project (h2)
+        h1  Next-Generation (h1)
+      pre.Details=JSON.stringify(userProfile, null, 2)
+
+    div.NavButtonspage1
+      a(href="/Harry_personlized")
+         div.NavButton profile personlize
+    div.NavButtonspage2
+      a(href="/")
+         div.NavButton Go To HOME
+      span.Details Go HOME
+    div.NavButtons
+      a(href="https://www.atg.se/")
+        div.NavButton atg.se

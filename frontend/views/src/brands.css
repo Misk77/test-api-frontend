@@ -1,0 +1,89 @@
+@import "./variables.css";
+
+.defaultBrandBackground {
+    background-image: url('atg-brand/assets/images/patterns/short/default.svg');
+}
+
+.v86BrandBackground {
+    background-image: url('atg-brand/assets/images/patterns/short/v86.svg');
+}
+
+.v75BrandBackground {
+    background-image: url('atg-brand/assets/images/patterns/short/v75.svg');
+}
+
+.vrBrandBackground {
+    background-image: url('atg-brand/assets/images/patterns/short/vr.svg');
+}
+
+.galoppBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.gs75BrandBackground {
+    background-image: url('atg-brand/assets/images/patterns/short/gs75.svg');
+}
+
+.v65BrandBackground {
+    background-image: url('atg-brand/assets/images/patterns/short/v65.svg');
+}
+
+.v64BrandBackground {
+    background-image: url('atg-brand/assets/images/patterns/short/v64.svg');
+}
+
+.v5BrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.v4BrandBackground {
+    background-image: url('atg-brand/assets/images/patterns/short/v4.svg');
+}
+
+.v3BrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.ddBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.ldBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.trioBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.tvillingBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.kombBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.vinnareBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.platsBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.vpBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.raketBrandBackground {
+    composes: defaultBrandBackground;
+}
+
+.top7BrandBackground {
+    background-image: linear-gradient(var(--brand-top7-gradient-start), var(--brand-top7-gradient-end));
+}
+
+.top7proBrandBackground {
+    composes: defaultBrandBackground;
+}

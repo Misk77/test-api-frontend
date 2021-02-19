@@ -1,0 +1,199 @@
+button {
+  overflow: visible; //IE seems to default to hidden instead of visible
+}
+
+.start-btn-wrapper {
+  position: relative;
+}
+
+.start-btn-tooltip {
+  text-align: left;
+  z-index: 20011;
+  height: auto;
+  bottom: 27px;
+  width: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  pointer-events: none;
+
+  > div {
+    white-space: nowrap;
+  }
+}
+
+.start-btn-tooltip:before,
+.start-btn-tooltip:after {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-bottom: none;
+  content: " ";
+}
+
+.start-btn-tooltip--left {
+  left: -12px;
+}
+
+.start-btn-tooltip--right {
+  right: -12px;
+}
+
+@media @sm {
+  .start-btn-tooltip--left {
+    left: -7px;
+  }
+
+  .start-btn-tooltip--right {
+    right: -12px;
+  }
+}
+
+.start-btn-tooltip--left:before,
+.start-btn-tooltip--right:before {
+  bottom: -11px;
+  border-width: 11px;
+  border-top-color: black;
+}
+
+.start-btn-tooltip--selected {
+  border-color: @btn-bet-active-border;
+
+  &.start-btn-tooltip--left:before,
+  &.start-btn-tooltip--right:before {
+    border-top-color: @btn-bet-active-border;
+  }
+}
+
+.start-btn-tooltip--left:before {
+  left: 20px;
+}
+
+.start-btn-tooltip--right:before {
+  right: 20px;
+}
+
+.start-btn-tooltip--left:after,
+.start-btn-tooltip--right:after {
+  bottom: -10px;
+  border-width: 10px;
+  border-top-color: white;
+}
+
+.start-btn-tooltip--left:after {
+  left: 21px;
+}
+
+.start-btn-tooltip--right:after {
+  right: 21px;
+}
+
+.start-btn-tooltip--scratched {
+  opacity: 0.6;
+}
+
+.sticky {
+  .start-btn-tooltip {
+    display: none;
+  }
+}
+
+.btn-race-bet {
+  padding: 1px 1px 0 0;
+  position: relative;
+
+  .size(16px);
+  margin: 5px 1px;
+  border-radius: 100%;
+  border-width: 1px;
+  font-size: 7px;
+
+  @media @sm {
+    .size(22px);
+    font-size: 11px;
+    line-height: 1.9;
+    margin: 4px;
+  }
+
+  &.active {
+    background: @btn-bet-active-bg;
+    color: @btn-bet-active-color;
+    border-color: @btn-bet-active-border;
+    .verticalGradient(@btn-bet-active-gradient-start, @btn-bet-active-gradient-end);
+
+    &:hover {
+      .verticalGradient(darken(@btn-bet-active-gradient-start, 5%), darken(@btn-bet-active-gradient-end, 5%));
+      color: @btn-bet-active-color;
+    }
+  }
+
+  &.scratched:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background: @btn-bet-scratched-bg;
+    top: 50%;
+    margin-top: -1px;
+    left: 0;
+  }
+
+  &.disabled {
+    color: @btn-bet-disabled-color;
+    border-color: @btn-bet-disabled-border;
+    background: transparent;
+    border: none;
+    .opacity(1);
+  }
+}
+
+.startlist .btn-race-bet {
+  margin-right: 6px;
+  .size(32px);
+  font-size: 16px;
+}
+
+.coupon .btn-race-bet {
+  font-size: 7px;
+  .size(16px);
+  margin: 3px 1px;
+
+  @media @xs {
+    font-size: 9px;
+    .size(20px);
+  }
+
+  @media @sm {
+    font-size: 11px;
+    .size(22px);
+    margin: 4px;
+  }
+}
+
+.race-percent .btn-race-bet {
+  font-size: 11px;
+  .size(22px);
+}
+
+.compact .trio-start .btn-race-bet {
+  width: 22px;
+  height: 22px;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.button-round-small {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border-width: 1px;
+  font-size: 18px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

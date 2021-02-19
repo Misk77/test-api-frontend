@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+
+  backend:
+    container_name: trainee-backend
+    hostname: trainee-backend
+    build:
+      dockerfile: Dockerfile
+      context: ./trainee21-backend
+    ports:
+      - 8080:8080
+    networks:
+     - ito-net
+
+  frontend:
+    container_name: trainee-frontend
+    hostname: trainee-frontend
+    build:
+      dockerfile: Dockerfile
+      context: ./trainee21-frontend
+    ports:
+      - 5000:5000
+    networks:
+     - ito-net
+
+  hbpersonal:
+    container_name: hbpersonal
+    hostname: hbpersonal
+    build:
+      dockerfile: Dockerfile
+      context: ./trainee21-algorithm-backend
+    ports:
+      - 3838:3838
+    networks:
+     - ito-net
+
+networks:
+  ito-net:
+
+
+

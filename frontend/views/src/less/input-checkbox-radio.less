@@ -1,0 +1,83 @@
+.input-radio {
+  user-select: none;
+  font-size: 14px;
+  padding: 12px;
+  cursor: pointer;
+  background: @input-check-radio-background;
+  border: none; // Removes button default border (checkbox must be button for onClick to work on nexus 7)
+
+  &--no-background {
+    background: none;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--small {
+    height: 32px;
+    padding: 0 7px;
+  }
+
+  &--disabled {
+    cursor: default;
+    opacity: 0.55;
+
+    * {
+      color: #88939a;
+    }
+
+    .checkbox-label:before {
+      border-color: #c1c8cf;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+  input {
+    float: left;
+    opacity: 0;
+
+    + span:extend(.checkbox-label all) {};
+  }
+}
+
+.checkbox-label {
+  position: relative;
+  display: block;
+  color: @brand-text;
+  text-align: left;
+  padding: 0 5px 0 27px;
+
+  // Before = the checkbox/radiocircle-background,
+  // After = the checkmark/the radio circle
+  &:before, &:after {
+    .VerticalCenter();
+    content: '';
+    display: inline-block;
+    .size(22px);
+  }
+
+  &:before {
+    box-shadow: @input-inner-shadow;
+    background: #fff;
+    border: 1px solid @input-border-color;
+    left: 0;
+  }
+}
+
+.input-radio input  {
+  + span:before {
+    border-radius: 50px;
+  }
+
+  &:checked + span:after {
+    background: @input-radio-selected;
+    border-radius: 50px;
+    width: 12px;
+    height: 12px;
+    left: 5px;
+  }
+}

@@ -1,0 +1,85 @@
+.atg-dropdown-menu {
+  position: relative;
+}
+
+.atg-dropdown-menu__toggle {
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.atg-dropdown-menu__toggle--active,
+.atg-dropdown-menu__toggle--active:hover {
+  position: relative; // for z-index to work
+  z-index: 1001; // prevents the .atg-drop-down__body box-shadow from overlapping the button
+}
+
+.atg-dropdown-menu__section-header {
+  background: #e8e8e4;
+  padding: 10px 10px 10px 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.atg-dropdown-menu__arrow-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.atg-dropdown-menu__body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+  background-clip: padding-box;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  transform: translateZ(0);
+  &--align-left {
+    left: 0;
+  }
+  &--align-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+.atg-dropdown-menu--other-games {
+  display: inline-block;
+  width: 32%;
+
+  .atg-dropdown-menu__toggle {
+    padding: 3px 10px;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.atg-dropdown-menu-transition-enter {
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.atg-dropdown-menu-transition-enter.atg-dropdown-menu-transition-enter-active {
+  transform: scaleY(1);
+  transition: transform .1s ease-in;
+}
+
+.atg-dropdown-menu-transition-leave {
+  transform-origin: top;
+  transform: scale(1, 1);
+}
+
+.atg-dropdown-menu-transition-leave.atg-dropdown-menu-transition-leave-active {
+  transform: scale(1, 0);
+  transition: transform .1s ease-in;
+}

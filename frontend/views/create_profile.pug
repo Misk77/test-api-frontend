@@ -1,0 +1,23 @@
+extends layout
+
+block layout-content
+  div.View.WelcomeView
+    h1.Banner PAGE CREATE_PROFILE
+    div.Message
+      div.Title
+        h3 PAGE create profile
+        h1 Yoy are on create PROFILE PAGE
+      pre.Details=JSON.stringify(userProfile, null, 2)
+    div.NavButtonprofile
+      a(href="/Harry_Bot")
+         div.NavButton Go to Harry-Bot
+      span.Details Use Harry-Bot
+    div.NavButtonspage2
+      a(href="/user")
+          div.NavButton user page
+    div.NavButtonspage2
+      a(href="/Harry_personlized")
+          div.NavButton Go to H-personlized
+    div.NavButtons
+      a(href="/")
+        div.NavButton HOME

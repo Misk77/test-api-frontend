@@ -1,0 +1,81 @@
+@import (reference) "bootstrap.less";
+
+/* Grid overrides to support faux grids and columns without padding */
+.row {
+    &__faux-columns {
+      height: 100%;
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      > [class*="col-"] {
+        display: table-cell;
+        height: 100%;
+        vertical-align: top;
+        float: none !important;
+      }
+    }
+
+    &--no-gutter {
+      > [class*="col-"],
+      > .row__faux-columns > [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+}
+
+.col {
+  &--divider {
+    border-right: 1px solid @grid-column-divider-color;
+  }
+}
+
+// Since we dont use columns in every row, this code is needed to make the
+// content the same width
+[class^="col-"] {
+  padding: 0;
+
+  @media @sm {
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  @media @md {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.container-fluid {
+    max-width: 1160px;
+}
+
+.container-fluid > .row {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+@media @md {
+    .container-fluid > .row {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.container-no-padding {
+    &:extend(.container);
+    padding-left: 0;
+    padding-right: 0;
+}

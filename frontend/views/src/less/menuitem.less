@@ -1,0 +1,115 @@
+.menu-item {
+    position: relative;
+    white-space: nowrap;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    color: @navbar-default-link-color;
+    text-decoration: none;
+
+    &:active,
+    .no-touch &:hover {
+      background: @link-color;
+      color: #fff;
+    }
+
+    &:active,
+    &__inner:active {
+        border-color: transparent;
+    }
+
+    .no-touch &:hover {
+      &, .menu-item__inner {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .menu-item__icon {
+    float: right;
+    position: relative;
+    top: 3px;
+  }
+
+  .menu-item--active {
+    border-color: transparent;
+    background-color: @link-color;
+    text-decoration: none;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+
+    & > .menu-item__inner {
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+    }
+  }
+
+  .menu-item--associated-track {
+    background-color: #fcf1b7;
+  }
+
+  .menu-item--login-indicator,
+  .menu-item--unavailable {
+    &, &:hover {
+      color: #898983;
+    }
+  }
+
+  .menu-item--unavailable {
+    cursor: default;
+    span {
+      opacity: 0.5;
+    }
+  }
+
+  .menu-item__label {
+    white-space: normal;
+    text-transform: none;
+  }
+  
+  .menu-item__inner,
+    // Fixes ios safari bug...
+  .menu-item:visited .menu-item__inner {
+    border-top: 1px solid @menu-border-color;
+    margin: 0 @menu-padding;
+    padding: @menu-padding 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    :not(.navbar-top-games) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .menu-item--large {
+    font-size: 25px;
+
+    .atg-icon {
+      .size(25px);
+    }
+  }
+
+  .menu-item--large .menu-item__inner {
+    padding: 14px @menu-padding;
+    margin: 0;
+  }
+
+  .menu-item--large .menu-item__icon {
+    top: 8px;
+  }
+
+  .menu-item--no-border .menu-item__inner {
+    border: none;
+  }
+
+  .menu-item--border-bottom .menu-item__inner {
+    border-bottom: 1px solid @menu-border-color;
+  }

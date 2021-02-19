@@ -1,0 +1,108 @@
+.input-field {
+  position: relative;
+}
+
+.input-field--show-label {
+  .input-field__label {
+    top: 0;
+    left: 0;
+    color: @text-color;
+  }
+}
+
+.input-field__input {
+  box-shadow: @input-inner-shadow;
+  background: #fff;
+  border: 1px solid @input-border-color;
+  height: 32px;
+  padding: 4px 10px;
+  font-size: 14px;
+  color: @brand-text;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border-radius: 0;
+}
+
+.input-field__input--error {
+  padding: 3px 9px;
+  border: 2px solid @input-error-color;
+}
+
+.input-field__input:focus,
+.input-field__input--focus {
+  padding: 3px 9px;
+  border: 2px solid @input-focus-color;
+  outline: 0;
+  box-shadow: @input-focus-shadow, @input-inner-shadow;
+}
+
+.input-field__input--uppercase {
+  text-transform: uppercase;
+}
+
+.input-field__input-wrapper {
+  position: relative;
+}
+
+.input-field__label {
+  margin-bottom: 0;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  top: 26px;
+  left: 12px;
+  transition: all 0.1s linear;
+  z-index: 5;
+  color: #bfbfbf;
+  user-select: none;
+  cursor: text;
+}
+
+.input-field__label__optional {
+  color: inherit;
+  margin-left: 5px;
+
+  &:before {
+    content: "(";
+  }
+  &:after {
+    content: ")";
+  }
+}
+
+.input-field__description {
+  font-size: 14px;
+}
+
+.input-field__description--error {
+  color: @input-error-color;
+}
+
+.input-field__suffix {
+  position: absolute;
+  right: -15px;
+  top: 5px;
+}
+
+.input-field__suffix--inside {
+  right: 10px;
+  z-index: 2;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.input-field__showHidePassword {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  color: #035ba6;
+  z-index: 2;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input-field__input--showHidePassword::-ms-reveal {
+  display: none;
+}

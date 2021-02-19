@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Font test</title>
+    <link rel="stylesheet" href="src/libraries.css">
+    <link rel="stylesheet" href="src/main.css">
+    <style>
+
+        h1 {
+            margin-top: 1.5em;
+            color: #AAC;
+        }
+
+        hr {
+            border-color: #000;
+        }
+
+        .ATGRubrik {
+            font-family: ATGRubrik;
+        }
+
+        .ATGTextRegular {
+            font-family: ATGText;
+        }
+
+        .ATGTextBold {
+            font-family: ATGText;
+            font-weight: bold;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .size-32 {
+            font-size: 32px;
+        }
+
+        .size-28 {
+            font-size: 28px;
+        }
+
+        .size-14 {
+            font-size: 14px;
+        }
+
+        .size-12 {
+            font-size: 12px;
+        }
+
+        .size-10 {
+            font-size: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container" id="main">
+
+</div>
+
+<script id="template" type="text/html">
+    <p>abcdefghijklmnopqrstuvwxyzåäö</p>
+    <p class="uppercase">abcdefghijklmnopqrstuvwxyzåäö</p>
+    <p>0123456789</p>
+    <p>æèéêüàáø</p>
+    <p class="uppercase">æèéêüàáø</p>
+    <p>?!#€£$@©§%&Œœ[\]()/{|}*+,-.":;<=>^_~¨«»¼½¾`'</p>
+
+
+</script>
+
+<script>
+    var template = document.getElementById("template");
+    var main = document.getElementById("main");
+    var fonts = [
+        {
+            name: "ATGRubrik",
+            sizes: [10, 12, 32]
+        },
+        {
+            name: "ATGTextRegular",
+            sizes: [10, 12, 14]
+        },
+        {
+            name: "ATGTextBold",
+            sizes: [10, 12, 14, 28]
+        }
+    ];
+
+    var getCharRange = function(start, end) {
+        var chars = [];
+        for (var i = start; i < end; i++) {
+            chars.push(String.fromCharCode(i));
+        }
+        return chars.join(" ");
+    };
+
+    var addSpecialChars = function(el) {
+        var p = document.createElement("p");
+        p.innerText = getCharRange(33,48);
+        p.innerText += "€ Œ œ ";
+        p.innerText += getCharRange(58, 65);
+        p.innerText += getCharRange(91, 97);
+        p.innerText += getCharRange(123, 127);
+        p.innerText += getCharRange(161, 256);
+
+        p.appendChild(document.createElement("hr"));
+        el.appendChild(p);
+    };
+
+    fonts.forEach(function(font) {
+        var fontDiv = document.createElement("div");
+        fontDiv.className = "content-island " + font.name;
+
+        font.sizes.forEach(function(size) {
+            var div = document.createElement("div");
+            div.className = "size-" + size;
+            div.innerHTML = template.innerHTML;
+//            addSpecialChars(div);
+            div.appendChild(document.createElement("hr"));
+            fontDiv.appendChild(div);
+        });
+        var title = document.createElement("h1");
+        title.textContent = font.name + " (" + font.sizes.join("px, ") + "px)";
+        main.appendChild(title);
+        main.appendChild(fontDiv);
+    });
+</script>
+</body>
+</html>

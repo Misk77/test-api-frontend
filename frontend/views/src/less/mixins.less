@@ -1,0 +1,132 @@
+.VerticalCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes startErrorAnimation {
+  0% { background: yellow; }
+  50% { background: red; }
+  100% { background: yellow; }
+}
+
+.StartErrorAnimation {
+  animation: startErrorAnimation 3s infinite ease;
+}
+
+.slanted-mixin(@degrees: -@default-slant-deg, @font-size:1em, @border-radius:0, @selector:~":after") {
+  position: relative;
+
+  &@{selector} {
+    content: ' ';
+    line-height: 0;
+    z-index:0;
+    .skew(@degrees, 0);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .backface-visibility(hidden);
+  }
+  .text-wrapper {
+    font-size: @font-size;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.preserveFontSize(@fontSize: 1em) {
+  font-size: unit(unit(@fontSize) / (unit(@font-size-base)/unit(@font-size-desktop-base)), em);
+  @media @sm {
+    font-size: @fontSize;
+  }
+}
+
+.triangle-base() {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+}
+.triangle(@direction, @size, @color) {
+  .triangle(@direction, @size * 2, @size, @color);
+}
+.triangle(@direction, @width, @height, @color) when (@direction = up) {
+  .triangle-base();
+  border-left: (@width / 2)solid transparent;
+  border-right: (@width / 2)solid transparent;
+  border-bottom: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = down) {
+  .triangle-base();
+  border-left: (@width / 2) solid transparent;
+  border-right: (@width / 2) solid transparent;
+  border-top: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = left) {
+  .triangle-base();
+  border-top: (@width / 2) solid transparent;
+  border-bottom: (@width / 2) solid transparent;
+  border-right: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = right) {
+  .triangle-base();
+  border-top: (@width / 2) solid transparent;
+  border-bottom: (@width / 2) solid transparent;
+  border-left: @height solid @color;
+}
+
+.verticalGradient(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+  background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+}
+
+.horizontalGradient(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+  background-image:  linear-gradient(to right, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+}
+
+.size(@size) {
+  width: @size;
+  height: @size;
+}
+
+.border-top-bottom(...) {
+  border-top: @arguments;
+  border-bottom: @arguments;
+}
+
+
+.border-left-right(...) {
+  border-left: @arguments;
+  border-right: @arguments;
+}
+
+.skew(@translateX: 0, @deg: @default-slant-deg) {
+  transform: skewX(-@deg) translateX(@translateX);
+
+  .inner {
+    margin-left: -@translateX;
+    transform: skewX(@deg);
+  }
+}
+
+.image-2x(@image, @image2x, @width, @height) {
+  background-image: url(@image);
+  background-repeat: no-repeat;
+  background-size: @width @height;
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url(@image2x);
+    background-size: contain;
+  }
+}

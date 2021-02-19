@@ -1,0 +1,108 @@
+.display-table {
+  display: table;
+  width: 100%;
+}
+
+.display-table-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.relative {
+  position: relative;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.v-align-middle {
+  vertical-align: middle;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.row-no-outer-padding {
+  .clearfix();
+  > :first-child {
+    padding-left: 0;
+  }
+  > :last-child {
+    padding-right: 0;
+  }
+
+  > .col-xs-12,
+  > .col-sm-12,
+  > .col-md-12,
+  > .col-lg-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.floating {
+  position: absolute;
+  left: 0;
+  right: auto;
+  &.floating-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-click {
+  cursor: default;
+}
+
+.overlay-fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  .overlay-transparent {
+    background: rgba(0, 0, 0, 0.0);
+  }
+}
+
+// A margin of .25em produces the same width gap as the space character.
+.space-left {
+  margin-left: 0.25em;
+}
+.space-right {
+  margin-right: 0.25em;
+}
+
+.space-both {
+  .space-left;
+  .space-right;
+}

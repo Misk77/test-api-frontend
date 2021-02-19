@@ -1,0 +1,160 @@
+@import "menuitem";
+
+@menu-border-color: #ebebeb;
+@menu-padding: 10px;
+
+.main-menu {
+  &.row {
+    position: relative;
+  }
+  &__submenu {
+    .menu-item__inner,
+    .menu-item:visited .menu-item__inner {
+      border-bottom: none;
+      border-top: 1px solid @menu-border-color;
+      padding-left: @menu-padding;
+    }
+  }
+
+  &__col {
+    width: 50%;
+    float: left;
+    text-align: left;
+    margin-top: @menu-padding;
+
+    &--border-left {
+      border-left: 1px solid @menu-border-color;
+    }
+
+    &--border-right {
+      border-right: 1px solid @menu-border-color;
+    }
+  }
+
+  &__username {
+    text-transform: none;
+    color: #d1d1ce;
+    padding: 10px 10px 0;
+    text-align: center;
+  }
+
+  &__nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 12px;
+
+    .atg-icon {
+      margin-top: -2px;
+    }
+
+    &-text {
+      margin: 0 8px;
+    }
+
+    &:active, &:focus, &:hover {
+      text-decoration: none;
+      color: @navbar-default-link-color;
+    }
+  }
+
+  &__actions {
+    &--logged-in {
+      .button:last-child {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__single-button {
+    padding: @menu-padding;
+  }
+
+  &__island {
+    background: #fff;
+    text-align: center;
+    border-bottom: 1px solid @menu-border-color;
+    border-top: 1px solid @menu-border-color;
+    overflow: hidden;
+    padding: 0 @menu-padding @menu-padding @menu-padding;
+
+    &--no-padding {
+      padding: 0;
+    }
+
+    &--no-border-top {
+      border-top: none;
+    }
+
+    &--no-border-bottom {
+      border-bottom: none;
+    }
+
+    &--border-left {
+      border-left: 1px solid @menu-border-color;
+    }
+
+    & + & {
+      border-top: none;
+    }
+
+    .button {
+      margin-top: 4px;
+    }
+
+    &-header {
+      font-family: ATGRubrik, sans-serif;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 16px;
+      margin: 0;
+      padding: @menu-padding 0 0 0;
+    }
+  }
+
+  /* Animations used when navigating between levels in a menu */
+  &-in {
+    &-enter {
+      -webkit-backface-visibility: hidden;
+      transform: translate(100%, 0);
+      &&-active {
+        transition: all .3s ease-out;
+        transform: translate(0%, 0);
+      }
+    }
+
+    &-leave {
+      -webkit-backface-visibility: hidden;
+      transform: translate(0%, 0);
+      top: 0;
+      position: absolute;
+      transition: all 0.3s ease-out;
+      &&-active {
+        transform: translate(-100%, 0);
+      }
+    }
+  }
+
+  &-out {
+    &-enter {
+      -webkit-backface-visibility: hidden;
+      transform: translate(-100%, 0);
+      top: 0;
+      position: absolute;
+      &&-active {
+        transition: all .3s ease-out;
+        transform: translate(0%, 0);
+      }
+    }
+
+    &-leave {
+      -webkit-backface-visibility: hidden;
+      top: 0;
+      position: absolute;
+      transform: translate(0%, 0);
+      transition: all .3s ease-out;
+      &&-active {
+        transform: translate(100%, 0);
+      }
+    }
+  }
+}

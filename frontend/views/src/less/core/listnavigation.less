@@ -1,0 +1,73 @@
+@sidebar-border-color: #e9eff4;
+@sidebar-border-color-active: #b4cce0;
+@sidebar-link-color: #014991;
+@sidebar-sublevel-bg: #d6e6f4;
+@sidebar-sublevel-active-bg: #035ba6;
+@sidebar-sublevel-active-link-color: #fff;
+@sidebar-sublevel-border-color: #b4cce0;
+
+.list-nav {
+  background: @navbar-default-bg;
+
+  li {
+    border-bottom: 1px solid @sidebar-border-color;
+
+    .arrow {
+      float: right;
+      margin-top: 3px;
+    }
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &.open {
+      border-bottom: 0;
+    }
+
+    &.active:not(.in-trail) {
+      background: @sidebar-sublevel-active-bg;
+      a, a:hover {
+        color: white;
+      }
+    }
+
+    li {
+      padding-left: 12px;
+    }
+
+    &.open ul {
+      display: block;
+    }
+
+    ul {
+      display: none;
+      background: @sidebar-sublevel-bg;
+      .border-top-bottom(solid 1px @sidebar-sublevel-border-color);
+
+      li {
+        border: 0;
+      }
+    }
+  }
+
+  .has-children + li {
+    border-top: 0;
+  }
+
+  a {
+    display: block;
+    padding: 12px;
+    font-weight: bold;
+    &, &:hover {
+      color: @sidebar-link-color;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.alert {
+  font-size: 14px;
+  color: #000;
+  padding: 12px;
+  margin-bottom: 15px;
+  position: relative;
+  white-space: normal;
+}
+
+.alert--no-margin {
+  margin-bottom: 0;
+}
+
+.alert--small-margin {
+  margin-bottom: 3px;
+}
+
+.alert--small-margin-top {
+  margin-top: 4px;
+}
+
+.alert--dismissable {
+  padding-right: 20px;
+}
+
+.alert--info {
+  background: @alert-info-color;
+}
+
+.alert--danger {
+  background: @alert-danger-color;
+}
+
+.alert--warning {
+  background: @alert-warning-color;
+}
+
+.alert--success {
+  background: @alert-success-color;
+}
+
+.alert__icon {
+  margin-right: 8px;
+}
+
+.alert__message {
+  @media @xs-only {
+    width: 80%;
+  }
+
+  @media @sm {
+    width: 90%;
+  }
+}

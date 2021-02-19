@@ -1,0 +1,159 @@
+.slanted {
+  background: transparent;
+  border: none;
+  .slanted-mixin(-@default-slant-deg, 1em, 0, ~":before");
+  overflow: visible;
+  padding: 0 8px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: ATGRubrik;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.slanted.kill-slant {
+  overflow: hidden;
+  vertical-align: text-bottom;
+  &:before {
+    left: -5px;
+  }
+}
+
+.slanted-rounded:before {
+  .box-shadow(none);
+  border-radius: 2px;
+}
+
+.slanted-button {
+  color: @btn-default-color;
+  cursor: pointer;
+
+  &:before {
+    .verticalGradient(@gamemenu-gradient-start, @gamemenu-gradient-end);
+    border: 1px solid @btn-default-border-color;
+    border-bottom-width: 2px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &:hover:before {
+    .verticalGradient(@gamemenu-hover-gradient-start, @gamemenu-hover-gradient-end);
+  }
+}
+
+.slanted-track {
+  color: @day-table-text-color;
+
+  &:before {
+    .verticalGradient(@btn-associated-hover-gradient-start, @btn-associated-hover-gradient-end);
+  }
+}
+
+.slanted-branded,
+.slanted-branded:hover {
+  color: #fff;
+}
+
+/**********************
+  Game-type branding
+**********************/
+.set-vertical-gradient(@gradient-start, @gradient-stop) {
+  background: @gradient-start;
+  .verticalGradient(@gradient-start, @gradient-stop);
+}
+
+.vertical-gradient-with-hover(@gradient-start, @gradient-stop, @darken) {
+  &:before {
+    .set-vertical-gradient(@gradient-start, @gradient-stop);
+  }
+
+  .no-touch .gametypes-wrapper &:hover:before,
+  .touch .gametypes-wrapper &:active:before {
+    .set-vertical-gradient(darken(@gradient-start, @darken), darken(@gradient-stop, @darken));
+  }
+}
+
+.active-game-type-v75 .slanted-branded,
+.slanted.slanted-branded.game-type-v75 {
+  .vertical-gradient-with-hover(@brand-v75-gradient-start, @brand-v75-gradient-end, 10%);
+}
+
+.slanted.slanted-branded.game-type-harry {
+  .vertical-gradient-with-hover(@brand-harry-gradient-start, @brand-harry-gradient-end, 10%);
+}
+
+.active-game-type-v86 .slanted-branded,
+.slanted.slanted-branded.game-type-v86 {
+  .vertical-gradient-with-hover(@brand-v86-gradient-start, @brand-v86-gradient-end, 10%);
+}
+
+.active-game-type-gs75 .slanted-branded,
+.slanted.slanted-branded.game-type-gs75 {
+  .vertical-gradient-with-hover(@brand-gs75-gradient-start, @brand-gs75-gradient-end, 10%);
+}
+
+.active-game-type-v64 .slanted-branded,
+.slanted.slanted-branded.game-type-v64 {
+  .vertical-gradient-with-hover(@brand-v64-gradient-start, @brand-v64-gradient-end, 14%);
+}
+
+.active-game-type-v65 .slanted-branded,
+.slanted.slanted-branded.game-type-v65 {
+  .vertical-gradient-with-hover(@brand-v65-gradient-start, @brand-v65-gradient-end, 10%);
+}
+
+.active-game-type-v4 .slanted-branded,
+.slanted.slanted-branded.game-type-v4 {
+  .vertical-gradient-with-hover(@brand-v4-gradient-start, @brand-v4-gradient-end, 10%);
+}
+
+.active-game-type-vr .slanted-branded,
+.slanted.slanted-branded.game-type-vr {
+  .vertical-gradient-with-hover(@brand-vr-gradient-start, @brand-vr-gradient-end, 5%);
+}
+
+.active-game-type-top7 .slanted-branded,
+.slanted.slanted-branded.game-type-top7 {
+  .vertical-gradient-with-hover(@brand-top7-gradient-start, @brand-top7-gradient-end, 5%);
+}
+
+.active-game-type-top7pro .slanted-branded,
+.slanted.slanted-branded.game-type-top7pro {
+  .vertical-gradient-with-hover(@brand-generic-gradient-start, @brand-generic-gradient-end, 22%);
+}
+
+.slanted-generic {
+  .vertical-gradient-with-hover(@brand-generic-gradient-start, @brand-generic-gradient-end, 22%);
+}
+
+.active-game-type-v5 .slanted-branded,
+.active-game-type-v3 .slanted-branded,
+.active-game-type-dd .slanted-branded,
+.active-game-type-ld .slanted-branded,
+.active-game-type-vp .slanted-branded,
+.active-game-type-trio .slanted-branded,
+.active-game-type-komb .slanted-branded,
+.active-game-type-plats .slanted-branded,
+.active-game-type-raket .slanted-branded,
+.active-game-type-vinnare .slanted-branded,
+.active-game-type-tvilling .slanted-branded,
+.game-type-v5.slanted-branded,
+.game-type-v3.slanted-branded,
+.game-type-dd.slanted-branded,
+.game-type-ld.slanted-branded,
+.game-type-vp.slanted-branded,
+.game-type-trio.slanted-branded,
+.game-type-komb.slanted-branded,
+.game-type-plats.slanted-branded,
+.game-type-raket.slanted-branded,
+.game-type-vinnare.slanted-branded,
+.game-type-tvilling.slanted-branded {
+  .vertical-gradient-with-hover(@brand-generic-gradient-start, @brand-generic-gradient-end, 22%);
+}
+
+/**********************
+  End of game-type branding
+**********************/

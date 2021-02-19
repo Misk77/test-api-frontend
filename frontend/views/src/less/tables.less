@@ -1,0 +1,141 @@
+table {
+  > thead,
+  > tbody {
+    > tr {
+      > th,
+      > td {
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  background-color: #fff;
+
+  .table {
+    background-color: inherit;
+  }
+
+  > thead > tr > th,
+  > tbody > tr > td {
+    padding: 6px;
+  }
+
+  th {
+    .table-header;
+  }
+
+  > tbody > tr > td {
+    border-top: 1px solid @table-border-color;
+    vertical-align: middle;
+    font-size: 12px;
+  }
+
+  .expandable-row {
+    cursor: pointer;
+  }
+
+  .expanded-row {
+    > td {
+      border-top: none;
+      overflow: visible;
+    }
+    .loading-error {
+      margin: 0;
+    }
+  }
+
+  .table-cell--sorted {
+    font-weight: bold;
+  }
+}
+
+.table--no-row-border > tbody > tr > td {
+  border-top: none;
+}
+
+.table--striped {
+  tr:nth-child(odd) {
+    td {
+      background-color: @table-bg-accent;
+    }
+  }
+}
+
+.table--framed {
+  border: 1px solid @table-border-color;
+}
+
+.table--bordered {
+  th,
+  td {
+    border: 1px solid @table-border-color;
+  }
+}
+
+.table--mobile {
+  @media @xs-only {
+    thead {
+      display: none;
+    }
+    tr {
+      border-top: 1px solid @table-border-color;
+    }
+    td {
+      border-top: 0;
+      display: block;
+
+      &:before {
+        content: attr(data-label);
+        display: block;
+        float: left;
+        font-weight: bold;
+        margin-right: 10px;
+        min-width: 95px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.table-header {
+  color: @table-header-color;
+  font-weight: bold;
+  user-select: none;
+  text-transform: uppercase;
+  font-size: 9px;
+  text-align: left;
+
+  &--sortable {
+    cursor: pointer;
+  }
+  &&--sorted {
+    color: @brand-text;
+  }
+}
+
+.game-table {
+  width: 100%;
+
+  > thead,
+  > tbody {
+    > tr {
+      > th,
+      > td {
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 6px;
+        border: 1px solid @table-border-color;
+      }
+      > th {
+        .table-header;
+      }
+      > td {
+        font-size: 12px;
+      }
+    }
+  }
+}

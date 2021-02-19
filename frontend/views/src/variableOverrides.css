@@ -1,0 +1,32 @@
+/* This file is imported instead of overridableVariables.css in all packages (see postcss.config.js).
+   Here you can supply custom, atg.se specific, override values for those variables.
+
+   Remember to import the overridableVariables.css from the packages you want to override, to get
+   default values for that package.
+*/
+@import "atg-ui/css/overridableVariables.css";
+@import "atg-ui-input/css/overridableVariables.css";
+
+:root {
+    --color-field-success: #dff0d8;
+    --color-field-info: #d9edf7;
+    --color-field-warning: #fcf8e3;
+    --color-field-danger: #facece;
+    --btn-default-gradient-hover-start: color(var(--btn-default-gradient-start) lightness(-5%));
+    --btn-default-gradient-hover-end: color(var(--btn-default-gradient-end) lightness(-5%));
+    --btn-success-border-color: #167a01;
+    --btn-success-gradient-start: #5dc633;
+    --btn-success-gradient-end: #4da52a;
+    --btn-buy-gradient-start: #22ac07;
+    --btn-buy-gradient-end: #218f0b;
+    --btn-buy-hover-gradient-start: #1d9206;
+    --btn-buy-hover-gradient-end: #1c7a09;
+
+    /* Receipt color codes */
+    --receipt-bg: #fff6cf;
+    --receipt-border-color: #d7d1ba;
+    --receipt-text-color: #324c69;
+    --receipt-result-bg: #fffdeb;
+    --receipt-correct-color: #4ebb35;
+    --receipt-placement-correct-color: #808080;
+}

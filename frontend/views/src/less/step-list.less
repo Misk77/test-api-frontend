@@ -1,0 +1,24 @@
+.step-list {
+  counter-reset: counter;
+
+  > div,
+  > li {
+    .step-list__item;
+  }
+}
+
+.step-list__item {
+  &:before {
+    content: counter(counter);
+    counter-increment: counter;
+    background-color: @brand-text;
+    color: #fff;
+    margin-right: 5px;
+    font-size: 10px;
+    .size(15px);
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 900;
+  }
+}

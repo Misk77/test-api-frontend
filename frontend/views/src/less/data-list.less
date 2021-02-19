@@ -1,0 +1,69 @@
+
+.data-list {
+  background-color: @container-bg;
+}
+
+.data-list li {
+  background-color: @container-bg;
+}
+
+.data-list li:nth-child(odd) {
+  background-color: @brand-gray-bg;
+}
+
+.data-list-row {
+  padding: 10px;
+}
+
+.data-list__label {
+  color: @day-label-text-color;
+  font-weight: bold;
+  min-width: 90px;
+  font-size: 11px;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.data-list__cell {
+  display: table-cell;
+}
+
+.data-list__cell-day {
+  display: table-cell;
+}
+
+.data-list__cell-day:nth-of-type(2n) {
+  width: 100%;
+}
+
+.data-list__cell-day:nth-of-type(2n):after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.data-list__biggest-game {
+  min-width: 53px;
+}
+
+.data-list__important-games {
+  margin-left: 8px;
+}
+
+.data-list__start-time {
+  color: @day-table-text-color;
+  margin-left: 5px;
+}
+
+.data-list__text {
+  font-size: 12px;
+}
+
+.data-list__text-enhanced {
+  text-transform: uppercase;
+}
+
+.data-list__race-number {
+  font-size: 12px;
+  font-weight: bold;
+}

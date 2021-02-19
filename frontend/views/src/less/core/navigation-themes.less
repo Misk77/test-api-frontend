@@ -1,0 +1,58 @@
+
+// Mixin
+.editorial-menu(@type, @gradient-start, @gradient-end){
+  @selector: ~".active-game-type-@{type}";
+
+  @{selector} {
+    .content-menu {
+      .verticalGradient(@gradient-start, @gradient-end);
+      &.no-items-loaded {
+        background-color: @gradient-end;
+      }
+    }
+  }
+}
+
+.editorial-menu(v86, @brand-v86-gradient-start, @brand-v86-gradient-end);
+
+.editorial-menu(v75, @brand-v75-gradient-start, @brand-v75-gradient-end);
+
+.editorial-menu(gs75, @brand-gs75-gradient-start, @brand-gs75-gradient-end);
+
+.editorial-menu(v65, @brand-v65-gradient-start, @brand-v65-gradient-end);
+
+.editorial-menu(v64, @brand-v64-gradient-start, @brand-v64-gradient-end);
+
+.editorial-menu(v5, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(v4, @brand-v4-gradient-start, @brand-v4-gradient-end);
+
+.editorial-menu(v3, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(ld, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(dd, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(trio, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(tvilling, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(komb, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(vinnare, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(plats, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(vp, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(raket, @brand-v5-gradient-start, @brand-v5-gradient-end);
+
+.editorial-menu(top7pro, @brand-top7pro-gradient-start, @brand-top7pro-gradient-end);
+
+.editorial-menu(harry, @brand-v75-gradient-start, @brand-v75-gradient-end);
+
+.editorial-menu(vr, @brand-v75-gradient-start, @brand-v75-gradient-end);
+
+
+
+//.editorial-menu(@default-main);

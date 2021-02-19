@@ -1,0 +1,335 @@
+@default-slant-deg:               22.7deg;
+
+// Grid
+@grid-gutter-width:               20px;
+@grid-column-divider-color:       #ebebeb;
+
+@content-border-radius:           .2em;
+
+@game-page-control-gutter-width:  40px;
+// Gray and brand colors for use across Bootstrap.
+@gray-darker:                     lighten(#000, 13.5%); // #222
+@gray-dark:                       lighten(#000, 20%);   // #333
+@gray:                            lighten(#000, 33.5%); // #555
+@gray-light:                      lighten(#000, 60%);   // #999
+@gray-lighter:                    lighten(#000, 93.5%); // #eee
+@brand-gray:                      #eaeff5;
+@brand-gray-bg:                   #f5f5f2;
+@brand-gray-bg-dark:              #dbdbd7;
+@brand-gray-border:               #d7dcdf;
+@brand-gray-border-dark:          #cacbcb;
+
+@brand-text:                      #595953;
+@brand-text-dark:                 #1a3775;
+@brand-text-grey:                 #747371;
+@brand-primary:                   #1B3481;
+@brand-success:                   #e0f2d9;
+@brand-success-text:              #1e6800;
+@brand-info:                      #5bc0de;
+@brand-warning:                   #f0ad4e;
+@brand-danger:                    #d9534f;
+@brand-danger-text:               #d9534f;
+
+// Background color for `<body>`.
+@body-bg:                         #142433;
+@container-bg:                    #FFF;
+
+// Global text color on `<body>`.
+@text-color:                      @brand-text;
+@text-shadow:                     1px 1px rgba(0, 0, 0, 0.25);
+
+// Global border color
+@border-color:                    #dce0e7;
+
+// Global textual link color.
+@link-color:                      #004F9F;
+
+// Link hover color set via `darken()` function.
+@link-hover-color:                darken(@link-color, 15%);
+
+@dark-content-bg:                 #1F313F;
+
+// Typography
+@font-family-base:                Roboto;
+@font-size-base:                  12px;
+@font-size-desktop-base:          12px;
+
+@font-size-h1:                    32px;
+@font-size-h2:                    26px;
+@font-size-h3:                    22px;
+@font-size-h4:                    16px;
+@font-size-h5:                    12px;
+@font-size-h6:                    10px;
+
+@line-height-base:                1.428571429; // 20/14
+@line-height-computed:            floor((@font-size-base * @line-height-base)); // ~20px
+
+@headings-font-family:            @font-family-base;
+@headings-font-weight:            700;
+@headings-line-height:            1.1;
+@headings-color:                  inherit;
+
+// Gradients
+@default-gradient-start:          #0266b0;
+@default-gradient-end:            #09428f;
+
+@btn-success-gradient-start:      #5dc633;
+@btn-success-gradient-end:        #4da52a;
+
+@btn-bet-active-gradient-start:   @btn-success-gradient-start;
+@btn-bet-active-gradient-end:     @btn-success-gradient-end;
+@btn-bet-disabled-gradient-start: lighten(@btn-default-gradient-start, 5%);
+@btn-bet-disabled-gradient-end:   lighten(@btn-default-gradient-end, 5%);
+
+@gamemenu-gradient-start:         @btn-default-gradient-start;
+@gamemenu-gradient-end:           @btn-default-gradient-end;
+
+@gamemenu-hover-gradient-start:   #f1f7fb;
+@gamemenu-hover-gradient-end:     #d2dfec;
+
+@contentmenu-gradient-start:      #FFF;
+@contentmenu-gradient-end:        @brand-gray;
+
+@startlist-row-gradient-start:    #fff;
+@startlist-row-gradient-end:      #f6f9fc;
+
+@account-row-gradient-start:      @startlist-row-gradient-start;
+@account-row-gradient-end:        @startlist-row-gradient-end;
+
+@startlist-gradient-start:        #eaeff5;
+@startlist-gradient-end:          #cbd3dc;
+
+@dark-gradient-start:             #243848;
+@dark-gradient-end:               #162737;
+
+@light-gradient-start:            #405c6c;
+@light-gradient-end:              #2e4958;
+
+// Gametype brands
+@brand-generic-primary:           #65ACDC;
+@brand-generic-gradient-start:    #86C2EB;
+@brand-generic-gradient-end:      #4798CE;
+@match-default-svg:               #4aa0c6;
+
+@brand-v86-primary:               #711970;
+@brand-v86-gradient-start:        #954b98;
+@brand-v86-gradient-end:          #79237b;
+@brand-v86-primary-match-svg:     #954993;
+
+@brand-v75-primary:               #004f9f;
+@brand-v75-gradient-start:        #006db6;
+@brand-v75-gradient-end:          #004f9f;
+@brand-v75-primary-match-svg:     #0D58A5;
+
+@brand-harry-primary:             @brand-v75-primary;
+@brand-harry-gradient-start:      @brand-v75-gradient-start;
+@brand-harry-gradient-end:        @brand-v75-gradient-end;
+
+@brand-galopp-primary:            #014f9f;
+@brand-galopp-gradient-start:     #006db6;
+@brand-galopp-gradient-end:       #014f9f;
+
+@brand-gs75-primary:               #2C6045;
+@brand-gs75-gradient-start:        #2A724E;
+@brand-gs75-gradient-end:          #2A513F;
+@brand-gs75-primary-match-svg:     #0F7056;
+
+@brand-v65-primary:               #c00a26;
+@brand-v65-gradient-start:        #e72f40;
+@brand-v65-gradient-end:          #c00a26;
+@brand-v65-primary-match-svg:     #CC2231;
+
+@brand-v64-primary:               #f39332;
+@brand-v64-gradient-start:        #f39332;
+@brand-v64-gradient-end:          #ee7202;
+@brand-v64-primary-match-svg:     #EF8126;
+
+@brand-v5-primary:                @brand-generic-primary;
+@brand-v5-gradient-start:         @brand-generic-gradient-start;
+@brand-v5-gradient-end:           @brand-generic-gradient-end;
+@brand-v5-primary-match-svg:      @match-default-svg;
+
+@brand-v4-primary:                @brand-generic-primary;
+@brand-v4-gradient-start:         @brand-generic-gradient-start;
+@brand-v4-gradient-end:           @brand-generic-gradient-end;
+@brand-v4-primary-match-svg:      @match-default-svg;
+
+@brand-v3-primary:                @brand-generic-primary;
+@brand-v3-gradient-start:         @brand-generic-gradient-start;
+@brand-v3-gradient-end:           @brand-generic-gradient-end;
+@brand-v3-primary-match-svg:      @match-default-svg;
+
+@brand-dd-primary:                @brand-generic-primary;
+@brand-dd-gradient-start:         @brand-generic-gradient-start;
+@brand-dd-gradient-end:           @brand-generic-gradient-end;
+
+@brand-ld-primary:                @brand-generic-primary;
+@brand-ld-gradient-start:         @brand-generic-gradient-start;
+@brand-ld-gradient-end:           @brand-generic-gradient-end;
+
+@brand-trio-primary:              @brand-generic-primary;
+@brand-trio-gradient-start:       @brand-generic-gradient-start;
+@brand-trio-gradient-end:         @brand-generic-gradient-end;
+
+@brand-tvilling-primary:          @brand-generic-primary;
+@brand-tvilling-gradient-start:   @brand-generic-gradient-start;
+@brand-tvilling-gradient-end:     @brand-generic-gradient-end;
+
+@brand-komb-primary:              @brand-generic-primary;
+@brand-komb-gradient-start:       @brand-generic-gradient-start;
+@brand-komb-gradient-end:         @brand-generic-gradient-end;
+
+@brand-vinnare-primary:           @brand-generic-primary;
+@brand-vinnare-gradient-start:    @brand-generic-gradient-start;
+@brand-vinnare-gradient-end:      @brand-generic-gradient-end;
+
+@brand-plats-primary:             @brand-generic-primary;
+@brand-plats-gradient-start:      @brand-generic-gradient-start;
+@brand-plats-gradient-end:        @brand-generic-gradient-end;
+
+@brand-vp-primary:                @brand-generic-primary;
+@brand-vp-gradient-start:         @brand-generic-gradient-start;
+@brand-vp-gradient-end:           @brand-generic-gradient-end;
+
+@brand-raket-primary:             @brand-generic-primary;
+@brand-raket-gradient-start:      @brand-generic-gradient-start;
+@brand-raket-gradient-end:        @brand-generic-gradient-end;
+
+@brand-top7-primary:              @brand-generic-primary;//#861459;
+@brand-top7-gradient-start:       #d0093e;
+@brand-top7-gradient-end:         #8e0050;
+
+@brand-vr-primary:                #21211f;
+@brand-vr-gradient-start:         #414141;
+@brand-vr-gradient-end:           #1A1A1A;
+
+@brand-top7pro-primary:           @brand-generic-primary;
+@brand-top7pro-gradient-start:    @brand-generic-gradient-start;
+@brand-top7pro-gradient-end:      @brand-generic-gradient-end;
+
+// Buttons
+@btn-default-color:               #014991;
+@btn-default-border-color:        #bacbdf;
+@btn-default-gradient-start:      #fff;
+@btn-default-gradient-end:        #dbe4ef;
+@btn-default-hover-gradient-start:#f1f6fa;
+@btn-default-hover-gradient-end:  #d2deec;
+@btn-default-active-gradient-start: #006db6;
+@btn-default-active-gradient-end: #004f9f;
+@btn-default-active-shadow:       inset 0 3px 5px rgba(0, 0, 0, .125);
+
+@btn-primary-gradient-start:      #22ac07;
+@btn-primary-gradient-end:        #218f0b;
+@btn-primary-hover-gradient-start:#1d9206;
+@btn-primary-hover-gradient-end:  #1c7a09;
+@btn-primary-border:              #167a01;
+@btn-primary-color:               #fff;
+
+@btn-danger-gradient-start:       #d63a1e;
+@btn-danger-gradient-end:         #b21805;
+@btn-danger-hover-gradient-start: #b6311a;
+@btn-danger-hover-gradient-end:   #971404;
+@btn-danger-border:               #821103;
+@btn-danger-color:                #fff;
+
+@btn-blue-gradient-start:         @btn-default-active-gradient-start;
+@btn-blue-gradient-end:           @btn-default-active-gradient-end;
+@btn-blue-hover-gradient-start:   darken(@btn-default-active-gradient-start, 5%);
+@btn-blue-hover-gradient-end:     darken(@btn-default-active-gradient-end, 5%);
+@btn-blue-border:                 #1e3480;
+@btn-blue-color:                  #fff;
+
+@btn-font-family-base:            @font-family-base;
+
+@btn-bet-active-color:            #FFF;
+@btn-bet-active-bg:               @btn-bet-active-gradient-end;
+@btn-bet-active-border:           #297e08;
+
+@btn-bet-scratched-bg:            #d20000;
+
+@btn-bet-disabled-color:          #98a6ae;
+@btn-bet-disabled-border:         lighten(@btn-default-border-color, 5%);
+
+@track-color: #feda1b;
+
+@btn-track-gradient-start:        @track-color;
+@btn-track-gradient-end:          #efcb0c;
+
+@btn-track-hover-gradient-start:  #f1cf1a;
+@btn-track-hover-gradient-end:    #e3c10b;
+
+@btn-associated-hover-gradient-start: #ffe769;
+@btn-associated-hover-gradient-end: #efcb0f;
+
+// Nav
+@nav-tabs-active-link-hover-bg:   #e7e7e7;
+@navbar-item-border-color:        #063871;
+@navbar-default-color:            #014593;
+@navbar-default-bg:               #fff;
+@navbar-default-link-color:       #014991;
+@navbar-gradient-active-start:    #fff;
+@navbar-gradient-active-end:      #f6f9fc;
+@navbar-gradient-start:           @default-gradient-start;
+@navbar-gradient-end:             @default-gradient-end;
+@navbar-height-small:             40px;
+@navbar-height-medium:            50px;
+
+// Tables
+@table-header-color:              #868e95;
+@table-border-color:              @border-color;
+@table-success-border-color:      #c4e4b7;
+@table-bg-accent:                 @brand-gray-bg;
+@table-bg-hover:                  #e5e5e2;
+
+/* responsive breakpoints */
+/* adding print to ge the desktop version when printing */
+@xs:                              ~'(min-width: @{screen-xs}), print';
+@sm:                              ~'(min-width: @{screen-sm}), print';
+@md:                              ~'(min-width: @{screen-md}), print';
+@lg:                              ~'(min-width: @{screen-lg}), print';
+@xs-only:                         ~'(max-width: @{screen-xs-max})';
+@xs-only-min:                     ~'(max-width: @{screen-xs-min})';
+
+//== Forms
+@input-error-color:               #ed6363;
+@input-focus-color:               #004f9f;
+@input-border-color:              #bacbdf;
+@input-inner-shadow:              inset 5px 5px 5px 0px #f4f4f4;
+@input-focus-shadow:              0 0 5px 0 @input-focus-color;
+@input-check-radio-background:    #e2e2df;
+@input-radio-selected:            #014593;
+
+// Receipt
+@receipt-border-color:            #d7d1ba;
+@receipt-text-color:              #324c69;
+@receipt-color:                   #fff6cf;
+@receipt-icon-color:              #f1e4ad;
+@receipt-correct-color:           #4ebb35;
+@receipt-scratched:               @btn-bet-scratched-bg;
+@receipt-no-result:               #808080;
+@receipt-moved:                   @receipt-no-result;
+@receipt-given:                   #006acd;
+
+// Products
+@product-tab-gradient-start:      #1c3c95;
+@product-tab-gradient-end:        #183584;
+@product-tab-gradient-active-start: #006bb5;
+@product-tab-gradient-active-end: #00579e;
+@product-tab-color-text:          #fff;
+
+// Wells
+@well-background-color:           #f2f6f9;
+@well-border-color:               #cfdee9;
+@well-font-color:                 #595959;
+
+@alert-success-color:             #cceac0;
+@alert-info-color:                #b2cae2;
+@alert-danger-color:              #f8c0c5;
+@alert-warning-color:             #fbdec0;
+
+// Content Menu
+@content-menu-height:             47px;
+
+// Startlists
+@startlist-change:                @btn-bet-scratched-bg;
+@startlist-change-lighter:        #eb2108;

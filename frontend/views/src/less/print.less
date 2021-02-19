@@ -1,0 +1,269 @@
+@media print {
+
+  .print-page-unbreakable {
+    page-break-inside: avoid;
+  }
+
+  * {
+    color: #000 !important;
+  }
+
+  // This property enables the background when printing
+  .btn-race-bet.scratched:after,
+  .btn-race-bet.active {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .results {
+    display: block !important;
+  }
+
+  // Game page
+  .game-view {
+    .bet-cost,
+    .to-top,
+    .start-info__actions,
+    .compact-toggle--arrow-left,
+    .compact-toggle--arrow-right,
+    .video-col,
+    .media-button-col,
+    .placeholder-col,
+    .odds-search-form,
+    .sort-indicator {
+      display: none !important;
+    }
+
+    td, th {
+      text-align: left !important;
+    }
+
+    td {
+      font-size: 8px !important;
+      width: auto !important;
+    }
+
+    th {
+      font-size: 7px !important;
+      text-overflow: ellipsis;
+      width: auto !important;
+    }
+
+    .name-container {
+      word-wrap: break-word;
+      white-space: normal;
+      width: 110px !important;
+    }
+
+    .place-col {
+      width: 30px !important;
+      text-align: center !important;
+    }
+
+    .division-col {
+      width: 26px !important;
+      text-align: center !important;
+    }
+
+    .trainer-col {
+      width: 70px !important;
+    }
+
+    .horse-col {
+      width: 140px !important;
+    }
+
+    .driver-col {
+      width: 90px !important;
+    }
+
+    .shoeInfo-col {
+      min-width: 30px !important;
+    }
+
+    .betDistribution-col {
+      min-width: 36px !important;
+    }
+
+    .horse-name {
+      line-height: 2;
+    }
+
+    .result-stats {
+      margin-top: 22px;
+    }
+
+    table.game-table thead,
+    .startlist-row.selected td,
+    .startlist-header {
+      border-bottom: none !important;
+    }
+
+    .place-col,
+    .division-col {
+      border-left: 1px solid @table-border-color !important;
+    }
+
+    .table-header {
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+
+    .place-col,
+    .division-col {
+      border-bottom: 1px solid @table-border-color !important;
+    }
+
+    .distance-divider,
+    .row-no-outer-padding {
+      border: 2px solid @table-border-color !important;
+    }
+
+    .most-played,
+    .game-odds {
+      display: block !important;
+      page-break-before: always !important;
+    }
+
+    .most-played {
+      .game-odds__table {
+        margin-right: 6px !important;
+        max-width: 46% !important;
+      }
+
+      .game-odds__ranking {
+        border-left: 1px solid @table-border-color !important;
+      }
+    }
+
+    .game-odds {
+      .game-odds__table {
+        border-bottom: 1px solid @table-border-color !important;
+        border-right: none !important;
+
+        table tbody tr {
+          border-right: 1px solid @table-border-color !important;
+        }
+      }
+
+      .matrix {
+        th:not(.empty) {
+          border-top: 1px solid @table-border-color !important;
+        }
+      }
+
+      .hidden-xs {
+        display: inherit !important;
+      }
+    }
+
+    .reserve-marker {
+      width: 10px !important;
+      height: 10px !important;
+      line-height: 1 !important;
+      background: #fff !important;
+    }
+  }
+
+  .game-percent {
+    display: none;
+    font-size: 10px;
+  }
+
+  .race-percent .game-table {
+    border: 1px solid @table-border-color !important;
+    border-top: none !important;
+  }
+
+  .game-percent--expanded {
+    display: block;
+  }
+
+  .game-percent--expanded .sort-indicator {
+    display: none;
+  }
+
+  .game-percent--expanded .race-percent {
+    margin-right: 4px;
+  }
+
+  .game-percent--expanded .race-percent td {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .game-percent--expanded .race-percent th {
+    padding: 2px;
+  }
+
+  .game-percent--expanded .game-percent__tables {
+    white-space: normal !important;
+  }
+
+  .game-percent--expanded .btn-race-bet {
+    border: none;
+    background: transparent;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .start-number {
+    font-size: 12px;
+    width: 1.2em !important;
+  }
+
+  // Account page
+  .account-page__content {
+    .data-table__settings,
+    .atg-icon-arrow-single-down,
+    .atg-icon-arrow-single-up,
+    .expanded-col {
+      display: none !important;
+    }
+
+    .data-table {
+      border-top: none !important;
+    }
+
+    table thead.hidden-xs {
+      display: table-header-group !important;
+    }
+
+    h1 {
+      margin-bottom: 20px !important;
+    }
+
+    .hidden-xs {
+      display: table-row !important;
+    }
+    .visible-xs {
+      display: none !important;
+    }
+  }
+
+  // Receipt
+  .receipt-holder {
+    .receipt-tabs__tab--active {
+      border-bottom: 1px solid #fff !important;
+    }
+
+    .receipt__given {
+      color: #ccc !important;
+    }
+
+    .receipt__footer,
+    .receipt__start-list-link,
+    .receipt__single-race,
+    .video-col,
+    .receipt__speedpayout-button {
+      display: none !important;
+    }
+
+    .receipt__win {
+      line-height: 1 !important;
+    }
+  }
+}
